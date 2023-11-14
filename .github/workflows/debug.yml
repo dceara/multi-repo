@@ -1,0 +1,14 @@
+name: Print environment variables
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print
+        run: env | sort
+
